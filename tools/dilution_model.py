@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """
-BULK Exchange — AURA Dilution Model
-Shows how your retro AURA share shrinks over time as weekly emissions accumulate.
+BULK Exchange — AURA Dilution Model (Season 1, HISTORICAL)
 
-CONFIRMED mechanics:
+HISTORICAL TOOL: models Season 1's pre-deposit dilution mechanics, which
+CLOSED September 5, 2026 at BULK mainnet launch. The retro pool and weekly
+pre-deposit emissions it models no longer run. AURA on mainnet now accrues
+through trading volume, BulkSOL holding, and referrals. This tool is
+preserved as a historical reference for the closed campaign only.
+
+Season 1 CONFIRMED mechanics (now closed):
   - 500,000 AURA retroactively distributed on June 1, 2026 (one-time)
-  - 1,000,000 AURA emitted every week from June 6, 2026
+  - 1,000,000 AURA emitted every week from June 6 to September 5, 2026
   - 30% of total BULK token supply allocated to community
 
 ESTIMATED (not published):
@@ -53,12 +58,13 @@ def run_model(retro_aura: float, token_prices: list[float]):
         print(f"  {week:>4}  {pool:>12,.0f}  {share_pct:>10.4f}%{price_vals}")
 
     print()
-    print("  HOW TO READ THIS:")
-    print("  Your retro AURA is fixed. Every week, 1M more AURA is minted.")
-    print("  Your % of the total pool shrinks — even if you do nothing.")
-    print("  Depositing USDC adds to your AURA and partially offsets dilution.")
+    print("  HOW TO READ THIS (Season 1, historical):")
+    print("  Your retro AURA is fixed. Every week, 1M more AURA was minted.")
+    print("  Your % of the total pool shrank — even if you did nothing.")
+    print("  Depositing USDC added to your AURA and partially offset dilution.")
     print()
-    print("  START EARNING: https://builtonbulk.xyz/go/bulk-app (ref: yeti)")
+    print("  Historical tool — pre-deposits closed at mainnet launch Sept 5, 2026.")
+    print("  Current AURA: builtonbulk.xyz/aura-points-guide (ref: YETI)")
     print()
 
     # break-even analysis: how much USDC needed to maintain current % share

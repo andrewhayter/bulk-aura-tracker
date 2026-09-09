@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """
-BULK Exchange — AURA Points Calculator
-Estimates weekly AURA earnings and dilution curve.
+BULK Exchange — AURA Points Calculator (Season 1, HISTORICAL)
 
-CONFIRMED mechanics (from official BULK announcements):
-  - 1,000,000 AURA distributed every week
+HISTORICAL TOOL: models Season 1's pre-deposit AURA formula, which CLOSED
+September 5, 2026 at BULK mainnet launch. Every pre-deposit converted to
+trading margin. AURA on mainnet now accrues through trading volume, BulkSOL
+holding, and referrals (exact per-volume formula not yet published). This
+tool is preserved as a historical reference for the closed campaign only.
+
+Season 1 CONFIRMED mechanics (from official BULK announcements, now closed):
+  - 1,000,000 AURA distributed every week (June 6 - Sept 5, 2026)
   - Formula: USDC deposited x time held (pro-rata share of total TVL)
-  - Depositors receive the "majority" of weekly AURA
-  - Referrers, BulkSOL stakers/holders receive the remainder
+  - Depositors received the "majority" of weekly AURA
+  - Referrers, BulkSOL stakers/holders received the remainder
   - 30% of total BULK token supply allocated to community
 
 ESTIMATED (not published by BULK team):
@@ -191,7 +196,8 @@ Examples:
     print("  Total supply and TGE conversion formula are not published.")
     print("  Depositor bucket % (70%) is estimated — BULK says 'majority'.")
     print("  30% community allocation is confirmed by BULK team.")
-    print("  Deposit is withdrawable anytime — check early.bulk.trade")
+    print("  Historical (Season 1): pre-deposits closed at mainnet launch Sept 5, 2026.")
+    print("  More info: builtonbulk.xyz/aura-points-guide")
     print()
 
     # Referral scenario
@@ -216,7 +222,7 @@ Examples:
                 f"{total_ref_aura:>14,.0f}"
             )
         print()
-        print("  Get your referral link at: early.bulk.trade/deposit")
+        print("  Historical tool — referrals now earn via trading on mainnet.")
         print("  Track it at: builtonbulk.xyz/bulk-referral-program")
         print()
 
